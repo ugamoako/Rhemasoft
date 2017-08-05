@@ -1,0 +1,97 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumbs
+
+block variables
+  - var activeIndex = 1
+  - var pageName = 'Footer Modern'
+
+block page
+  // Page header
+  include ../sections/_header-default
+
+  +breadcrumbs({
+    path: [[menu[activeIndex].title, menu[activeIndex].link], ['Footers', '#'], [pageName]]
+  })
+
+  section.section-lg.bg-white.text-center
+    .shell
+      .range.range-70
+        .cell-sm-6.cell-md-4: a.link-image(href='#')
+          +jpg('brand-1-418x315')
+
+        .cell-sm-6.cell-md-4: a.link-image(href='#')
+          +jpg('brand-2-418x315')
+
+        .cell-sm-6.cell-md-4: a.link-image(href='#')
+          +jpg('brand-3-418x315')
+
+        .cell-sm-6.cell-md-4: a.link-image(href='#')
+          +jpg('brand-4-418x315')
+
+        .cell-sm-6.cell-md-4: a.link-image(href='#')
+          +jpg('brand-5-418x315')
+
+        .cell-sm-6.cell-md-4: a.link-image(href='#')
+          +jpg('brand-6-418x315')
+  ='\n'
+
+  // Gallery
+  section.section-lg.bg-white(data-photo-swipe-gallery='gallery')
+    .shell-fluid
+      .range.range-10.range-horizontal-10
+        .cell-sm-4.cell-lg-3
+          a.thumb-modern(data-photo-swipe-item, href='images/image-original-1-1200x905.jpg', data-size='1200x905')
+            figure
+              +jpg('home-default-7-472x355')
+            .thumb-modern__overlay
+
+        .cell-sm-4.cell-lg-3
+          a.thumb-modern(data-photo-swipe-item, href='images/image-original-2-1200x905.jpg', data-size='1200x905')
+            figure
+              +jpg('home-default-8-472x355')
+            .thumb-modern__overlay
+
+        .cell-sm-4.cell-lg-3
+          a.thumb-modern(data-photo-swipe-item, href='images/image-original-3-1200x906.jpg', data-size='1200x906')
+            figure
+              +jpg('home-default-9-472x355')
+            .thumb-modern__overlay
+
+        .cell-sm-4.cell-lg-3
+          a.thumb-modern(data-photo-swipe-item, href='images/image-original-4-1200x905.jpg', data-size='1200x905')
+            figure
+              +jpg('home-default-10-472x355')
+            .thumb-modern__overlay
+
+        .cell-sm-4.cell-lg-3
+          a.thumb-modern(data-photo-swipe-item, href='images/image-original-5-1200x905.jpg', data-size='1200x905')
+            figure
+              +jpg('home-default-11-472x355')
+            .thumb-modern__overlay
+
+        .cell-sm-4.cell-lg-3
+          a.thumb-modern(data-photo-swipe-item, href='images/image-original-6-1200x905.jpg', data-size='1200x905')
+            figure
+              +jpg('home-default-12-472x355')
+            .thumb-modern__overlay
+
+        .cell-sm-4.cell-lg-3
+          a.thumb-modern(data-photo-swipe-item, href='images/image-original-7-1200x906.jpg', data-size='1200x906')
+            figure
+              +jpg('home-default-13-472x355')
+            .thumb-modern__overlay
+
+        .cell-sm-4.cell-lg-3
+          a.thumb-modern(data-photo-swipe-item, href='images/image-original-8-1200x906.jpg', data-size='1200x906')
+            figure
+              +jpg('home-default-14-472x355')
+            .thumb-modern__overlay
+  ='\n'
+
+  include ../sections/_section-brand-carousel
+
+  // Page Footer
+  include ../sections/_footer-modern
+

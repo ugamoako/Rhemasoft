@@ -1,0 +1,84 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumbs
+
+block variables
+  - var activeIndex = 3
+  - var pageName = 'Single Event'
+
+block page
+  // Page header
+  include ../sections/_header-default
+
+  +breadcrumbs({
+      path: [[menu[activeIndex].title, menu[activeIndex].link], [pageName]]
+  }) 
+
+  section.bg-white.section-lg.text-center
+    .shell
+      .range.range-xs-center
+        article.cell-sm-10.cell-lg-8.post-event.section-divided__main 
+          section.post-event-single.section-sm
+            h3 The Power of Bootstrap Toolkit
+            time(datetime='2017').events-single-time September 28, 2015 @ 8:00 am - October 5, 2015 @ 5:00 pm
+            span.button.button-lg.button-gray-light-outline $100
+            .post-event-single-body.text-sm-left
+              +jpg('day-events-1-886x668')
+              p We’ve made a huge effort to provide you with the extreme power of site building via Bootstrap Framework. It is one of the most modern and flexible solutions for everyone who wants their website working properly and according to the latest standards. With Bootstrap, your website will look attractive and informative…
+            .group
+              a(href='#').button.button-gray-base GOOGLE CALENDAR
+              a(href='#').button.button-gray-base ICAL EXPORT
+
+          section.text-sm-left.section-sm
+            .range
+              .cell-sm-6
+                h5 Details
+                ul.list-xs
+                  li
+                    dl.list-terms-minimal
+                      dt Start
+                      dd: time(datetime='2017') September 28, 2015 @ 8:00 am
+                  li
+                    dl.list-terms-minimal
+                      dt End
+                      dd: time(datetime='2017') October 5, 2015 @ 5:00 pm
+                  li
+                    dl.list-terms-minimal
+                      dt Cost
+                      dd $100
+                  li
+                    dl.list-terms-minimal
+                      dt Event Category
+                      dd Design
+                  li
+                    dl.list-terms-minimal
+                      dt Event Tags
+                      dd events
+                  li
+                    dl.list-terms-minimal
+                      dt Website
+                      dd: a(href='http://www.demolink.org') http://www.demolink.org
+
+              .cell-sm-6
+                h5 Organizer
+                ul.list-xs
+                  li Brian Adams
+                  li
+                    dl.list-terms-minimal
+                      dt Phones
+                      dd
+                        a(href='callto:#') (800) 123-0045
+                        ='; '
+                        a(href='callto:#') (800) 123-0046
+
+          section.text-sm-left.section-sm
+            h5 Venue
+            p
+              | Big Theatre 378, Main Street  San-Francisco, CA United States
+              =' '
+              a(href="#") + Google Map
+
+  // Page Footer
+  include ../sections/_footer-corporate
+

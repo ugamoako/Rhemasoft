@@ -1,0 +1,22 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumbs
+
+block variables
+  - var activeIndex = 7
+  - var pageName = 'Icons'
+
+block page
+  // Page header
+  include ../sections/_header-default
+
+  +breadcrumbs({ 
+    path: [[menu[activeIndex].title, menu[activeIndex].link], [pageName]]
+  })
+
+  include ../sections/_section-font-awesome 
+  include ../sections/_section-linearicons
+
+  // Page Footer
+  include ../sections/_footer-minimal

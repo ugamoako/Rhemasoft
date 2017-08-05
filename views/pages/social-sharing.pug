@@ -1,0 +1,45 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumbs
+include ../elements/_ui-list-inline-icon
+
+block variables
+  - var activeIndex = 7
+  - var pageName = 'Social Sharing'
+
+block page
+  // Page header
+  include ../sections/_header-default
+
+  +breadcrumbs({
+    path: [[menu[activeIndex].title, menu[activeIndex].link], [pageName]]
+  })
+
+
+  section.section-lg.bg-white.text-center
+    .shell
+      h3 Social Sharing
+
+      +list-inline-icon({
+          list_class:'list-inline-sm',
+          items: [
+              "icon-sm fa-facebook",
+              'icon-sm fa-twitter',
+              'icon-sm fa-google-plus',
+              'icon-sm fa-vimeo',
+              'icon-sm fa-youtube',
+              'icon-sm fa-pinterest-p',
+              'icon-sm fa-linkedin',
+              'icon-sm fa-odnoklassniki',
+              'icon-sm fa-vk',
+              'icon-sm fa-skype',
+              'icon-sm fa-rss']
+      })
+
+
+  ='\n'
+
+  // Page Footer
+  include ../sections/_footer-corporate
+

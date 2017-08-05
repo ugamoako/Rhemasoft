@@ -1,0 +1,47 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumbs
+include ../elements/_ui-progress-bar-linear
+
+block variables
+  - var activeIndex = 2
+  - var pageName = 'Maintenance'
+
+block page
+  section.section-lg.bg-primary.text-center
+    .shell
+      .icon.icon-xxl.linear-icon-hammer-wrench
+      h3 Website will be online again soon. #[br]Currently it undergoes a regular health checkup.
+      .progress-bar-linear-limited
+        +progress-bar-linear({
+          title: "Website Update Progress",
+          valueTo: "49"
+        })
+  ='\n'
+
+  section.section-md.bg-white
+    .shell
+      .range.range-50
+        .cell-sm-6.cell-md-4
+          // Blurb minimal
+          article.blurb.blurb-minimal
+            .blurb-minimal__icon: span.icon.linear-icon-cog
+            p.blurb__title Maintenance check
+            p From time to time we put our website on maintenance to check if everything works OK!
+
+        .cell-sm-6.cell-md-4
+          // Blurb minimal
+          article.blurb.blurb-minimal
+            .blurb-minimal__icon: span.icon.linear-icon-cloud-download
+            p.blurb__title Feature updates
+            p We just love to roll out new features to our website. That’s what we’re doing right now! :-)
+
+        .cell-sm-6.cell-md-4
+          // Blurb minimal
+          article.blurb.blurb-minimal
+            .blurb-minimal__icon: span.icon.linear-icon-wrench
+            p.blurb__title Bug fixes
+            p Any website might stumble upon some bugs. Those need to be fixed!
+  ='\n'
+

@@ -1,0 +1,184 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumbs
+include ../elements/_ui-rd-parallax
+include ../elements/_ui-list-inline-icon
+
+block variables
+  - var activeIndex = 2
+  - var pageName = 'Our Team'
+
+block page
+  // Page header
+  include ../sections/_header-default
+
+  +breadcrumbs({
+    path: [[menu[activeIndex].title, menu[activeIndex].link], [pageName]]
+  })
+
+  section.bg-primary
+    +rd-parallax({
+      "backgroundSpeed": "0.25",
+      "attrType": "media",
+      "src": "images/parallax-07.jpg",
+      "htmlSpeed": "0.1",
+      "class": 'parallax-header'
+    })
+      .parallax-header__inner: .parallax-header__content
+        .shell
+          .range.range-xs-center
+            .cell-sm-10.cell-lg-8
+              h2 Meet the Team. Who are We?
+  ='\n'
+
+  section.section-lg.bg-white.text-center
+    .shell
+      .range.range-lg-center.range-50
+        .cell-lg-9
+          h3 Represent Your Staff
+          p It’s perfect to display the members of your staff, team or working force. Within Monstroid template you can present your team members in the best well made and interface with special design and multiple styling options.
+      .range.range-50
+        .cell-sm-6.cell-md-4
+          // Thumb corporate
+          .thumb.thumb-corporate
+            .thumb-corporate__main
+              +jpg('brian-king-480x362')
+
+              .thumb-corporate__overlay
+                +list-inline-icon({
+                  list_class: ['list-inline-sm', 'thumb-corporate__list'],
+                  items: [
+                    "icon-sm fa-facebook",
+                    'icon-sm fa-twitter',
+                    'icon-sm fa-google-plus',
+                    'icon-sm fa-vimeo',
+                    'icon-sm fa-youtube',
+                    'icon-sm fa-pinterest-p'
+                  ]
+                })
+
+            .thumb-corporate__caption
+              p.thumb__title: a(href=teamMember) Brian King
+              p.thumb__subtitle Director
+
+        .cell-sm-6.cell-md-4
+          // Thumb corporate
+          .thumb.thumb-corporate
+            .thumb-corporate__main
+              +jpg('amanda-smith-480x362')
+
+              .thumb-corporate__overlay
+                +list-inline-icon({
+                  list_class: ['list-inline-sm', 'thumb-corporate__list'],
+                  items: [
+                    "icon-sm fa-facebook",
+                    'icon-sm fa-twitter',
+                    'icon-sm fa-google-plus',
+                    'icon-sm fa-vimeo',
+                    'icon-sm fa-youtube',
+                    'icon-sm fa-pinterest-p'
+                  ]
+                })
+
+            .thumb-corporate__caption
+              p.thumb__title: a(href=teamMember) Amanda Smith
+              p.thumb__subtitle Marketing manager
+
+        .cell-sm-6.cell-md-4
+          // Thumb corporate
+          .thumb.thumb-corporate
+            .thumb-corporate__main
+              +jpg('george-nelson-418x315')
+
+              .thumb-corporate__overlay
+                +list-inline-icon({
+                  list_class: ['list-inline-sm', 'thumb-corporate__list'],
+                  items: [
+                    "icon-sm fa-facebook",
+                    'icon-sm fa-twitter',
+                    'icon-sm fa-google-plus',
+                    'icon-sm fa-vimeo',
+                    'icon-sm fa-youtube',
+                    'icon-sm fa-pinterest-p'
+                  ]
+                })
+
+            .thumb-corporate__caption
+              p.thumb__title: a(href=teamMember) George Nelson
+              p.thumb__subtitle Designer
+
+        .cell-sm-6.cell-md-4
+          // Thumb corporate
+          .thumb.thumb-corporate
+            .thumb-corporate__main
+              +jpg('barbara-young-480x362')
+
+              .thumb-corporate__overlay
+                +list-inline-icon({
+                  list_class: ['list-inline-sm', 'thumb-corporate__list'],
+                  items: [
+                    "icon-sm fa-facebook",
+                    'icon-sm fa-twitter',
+                    'icon-sm fa-google-plus',
+                    'icon-sm fa-vimeo',
+                    'icon-sm fa-youtube',
+                    'icon-sm fa-pinterest-p'
+                  ]
+                })
+
+            .thumb-corporate__caption
+              p.thumb__title: a(href=teamMember) Barbara Young
+              p.thumb__subtitle Creative Director
+
+        .cell-sm-6.cell-md-4
+          // Thumb corporate
+          .thumb.thumb-corporate
+            .thumb-corporate__main
+              +jpg('bryan-thompson-480x362')
+
+              .thumb-corporate__overlay
+                +list-inline-icon({
+                  list_class: ['list-inline-sm', 'thumb-corporate__list'],
+                  items: [
+                    "icon-sm fa-facebook",
+                    'icon-sm fa-twitter',
+                    'icon-sm fa-google-plus',
+                    'icon-sm fa-vimeo',
+                    'icon-sm fa-youtube',
+                    'icon-sm fa-pinterest-p'
+                  ]
+                })
+
+            .thumb-corporate__caption
+              p.thumb__title: a(href=teamMember) Bryan Thompson
+              p.thumb__subtitle Developer
+
+        .cell-sm-6.cell-md-4
+          // Thumb corporate
+          .thumb.thumb-corporate
+            .thumb-corporate__main
+              +jpg('paul-wallker-418x315')
+
+              .thumb-corporate__overlay
+                +list-inline-icon({
+                  list_class: ['list-inline-sm', 'thumb-corporate__list'],
+                  items: [
+                    "icon-sm fa-facebook",
+                    'icon-sm fa-twitter',
+                    'icon-sm fa-google-plus',
+                    'icon-sm fa-vimeo',
+                    'icon-sm fa-youtube',
+                    'icon-sm fa-pinterest-p'
+                  ]
+                })
+
+            .thumb-corporate__caption
+              p.thumb__title: a(href=teamMember) Paul Walker
+              p.thumb__subtitle Marketing
+  ='\n'
+
+
+  // Page Footer
+  include ../sections/_footer-corporate
+

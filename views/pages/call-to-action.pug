@@ -1,0 +1,28 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumbs
+
+block variables
+  - var activeIndex = 7
+  - var pageName = 'Call to Action'
+
+block page
+  // Page header
+  include ../sections/_header-default
+
+  +breadcrumbs({
+      path: [[menu[activeIndex].title, menu[activeIndex].link], [pageName]]
+  })
+
+  section.section-lg.bg-white
+    include ../sections/_section-cta-1
+    include ../sections/_section-cta-2
+    include ../sections/_section-cta-3
+    include ../sections/_section-cta-4
+    include ../sections/_section-cta-5
+    include ../sections/_section-cta-6
+
+  // Page Footer
+  include ../sections/_footer-corporate
+

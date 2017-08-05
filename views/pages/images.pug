@@ -1,0 +1,57 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumbs
+
+block variables
+  - var activeIndex = 7
+  - var pageName = 'Images'
+
+block page
+  // Page header
+  include ../sections/_header-default
+
+  +breadcrumbs({
+    path: [[menu[activeIndex].title, menu[activeIndex].link], [pageName]]
+  })
+
+  section.section-xs.bg-white.text-center
+    .shell
+      .range.range-sm-center.range-both-30.range-xl-both-50
+        .cell-sm-6
+          +jpg('images-1-662x491')
+
+        .cell-sm-6
+          .range.range-both-30.range-xl-both-50
+            .cell-sm-6
+              +jpg('images-2-301x227')
+            .cell-sm-6
+              +jpg('images-3-301x227')
+            .cell-sm-6
+              +jpg('images-4-301x227')
+            .cell-sm-6
+              +jpg('images-5-301x227')
+
+        .cell-sm-4
+          +jpg('images-6-418x315')
+        .cell-sm-4
+          +jpg('images-7-418x315')
+        .cell-sm-4
+          +jpg('images-8-418x315')
+
+        .cell-sm-4
+          +png('images-9-382x382', 'img-circle')
+  ='\n'
+
+  section.section-lg.bg-white
+    .shell-fluid
+      .range.range-condensed
+        .cell-sm-8
+          +jpg('images-10-1280x640')
+        .cell-sm-4
+          +jpg('images-11-640x640')
+  ='\n'
+
+  // Page Footer
+  include ../sections/_footer-corporate
+

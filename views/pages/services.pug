@@ -1,0 +1,137 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumbs
+include ../elements/_ui-rd-parallax
+include ../elements/_ui-thumbnail-classic
+
+block variables
+  - var activeIndex = 2
+  - var pageName = 'Services'
+
+block page
+  // Page header
+  include ../sections/_header-default
+
+  +breadcrumbs({
+    path: [[menu[activeIndex].title, menu[activeIndex].link], [pageName]]
+  })
+
+  section.bg-gray-lighter
+    +rd-parallax({
+      "backgroundSpeed": "0.35",
+      "attrType": "media",
+      "src": "images/parallax-04.jpg",
+      "htmlSpeed": "0.1",
+      "class": ['parallax-header']
+    })
+      .parallax-header__inner: .parallax-header__content
+        .shell
+          .range.range-xs-center
+            .cell-sm-10.cell-lg-8
+              h2 A Wide Variety of High Quality Services
+  ='\n'
+
+  section.section-md.bg-white
+    .shell
+      .range.range-60
+        .cell-sm-6.cell-lg-4
+          +thumbnail-classic({
+            img: 'services-1-418x315',
+            title: 'Bootstrap Framework',
+            text: 'Monstroid² is based on Bootstrap Framework, which makes it a nice template for any purpose. '
+          })
+        .cell-sm-6.cell-lg-4
+          +thumbnail-classic({
+            img: 'services-2-418x315',
+            title: 'Novi Builder',
+            text: 'Use our Novi Builder to customize and update your website within seconds.'
+          })
+        .cell-sm-6.cell-lg-4
+          +thumbnail-classic({
+            img: 'services-3-418x315',
+            title: 'Responsive & Retina Ready',
+            text: 'Monstroid² looks great on any screen resolution and on any device due to its responsiveness.'
+          })
+        .cell-sm-6.cell-lg-4
+          +thumbnail-classic({
+            img: 'services-4-418x315',
+            title: 'Tons of Tools for Real Needs',
+            text: 'Events calendar, bookings and schedule  are just some of tools that come on board.'
+          })
+        .cell-sm-6.cell-lg-4
+          +thumbnail-classic({
+            img: 'services-5-418x315',
+            title: 'Thought Through Layout',
+            text: 'Huge number of content layouts allow to assemble unique pages with great flexibility.'
+          })
+        .cell-sm-6.cell-lg-4
+          +thumbnail-classic({
+            img: 'services-6-418x315',
+            title: 'Clean and Crispy Design',
+            text: 'Monstroid² is crafted by top industry leaders with love, care and customer needs in mind. '
+          })
+
+  section.text-center
+    +rd-parallax({
+      "backgroundSpeed": "0.35",
+      "attrType": "media",
+      "src": "images/parallax-01.jpg",
+      "htmlSpeed": "0.1",
+      "class": 'rd-parallax-light'
+    })
+      .shell.section-xl
+        h2 Like What We Offer?
+        p Start with this demo now or check out the others to choose what you need.
+        a(href='#').button.button-primary View now!
+
+  section.section-lg.bg-white
+    .shell
+      .range.range-60.range-xs-center
+        .cell-sm-6.cell-md-4
+          // Blurb minimal
+          article.blurb.blurb-minimal
+            .blurb-minimal__icon: span.icon.linear-icon-rocket
+            p.blurb__title Built For Speed
+            p Built for speed and performance. Get best results at GTmetrix and Google PageSpeed.
+
+            ul.list-marked-primary
+              li Amazing Performance
+              li Improved Stability
+              li Optimized Page Load Time
+
+            a(href='single-service-page.html').button.button-gray-light-outline read more
+
+        .cell-sm-6.cell-md-4
+          // Blurb minimal
+          article.blurb.blurb-minimal
+            .blurb-minimal__icon: span.icon.linear-icon-equalizer
+            p.blurb__title Flexible and Multipurpose
+            p Monstroid² allows to create a various websites for complex and scalable project.
+
+            ul.list-marked-primary
+              li Lots of Predesigned Pages
+              li Extended Bootstrap Framework
+              li Clean Interface
+
+            a(href='single-service-page.html').button.button-gray-light-outline read more
+
+        .cell-sm-6.cell-md-4
+          // Blurb minimal
+          article.blurb.blurb-minimal
+            .blurb-minimal__icon: span.icon.linear-icon-file-search
+            p.blurb__title SEO Friendly
+            p Valid code and performance optimized framework make SEO easy and hassle free.
+
+            ul.list-marked-primary
+              li Indexable Content
+              li Vast Keyword Application
+              li On-Page Optimization
+
+            a(href='single-service-page.html').button.button-gray-light-outline read more
+
+  ='\n'
+
+  // Page Footer
+  include ../sections/_footer-corporate
+

@@ -1,0 +1,136 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-rd-video
+include ../elements/_ui-list-inline-icon
+
+block variables
+  - var activeIndex = 0
+  - var footerLink = true
+  - var pageName = 'Home Creative'
+
+block page
+  // Page Header
+  header.page-header
+    // RD Navbar
+    .rd-navbar-wrap
+      nav.rd-navbar.rd-sidebar_reverse.rd-navbar_inverse(data-layout='rd-navbar-fixed', data-sm-layout='rd-navbar-fixed', data-sm-device-layout='rd-navbar-fixed', data-md-layout='rd-navbar-sidebar', data-md-device-layout='rd-navbar-fixed', data-lg-device-layout='rd-navbar-fixed', data-lg-layout='rd-navbar-sidebar', data-stick-up-clone='false', data-sm-stick-up='true' data-md-stick-up='true' data-lg-stick-up='true', data-md-stick-up-offset='1px', data-lg-stick-up-offset='1px', data-body-class='rd-navbar-absolute', data-md-hover-on='false', data-lg-hover-on='false')
+        .rd-navbar-inner
+          // RD Navbar Panel
+          .rd-navbar-panel
+            .rd-navbar-panel__aside
+              button.rd-navbar-toggle.rd-navbar-search_collapsable(data-rd-navbar-toggle='.rd-navbar-nav-wrap'): span
+
+            .rd-navbar-panel__main.rd-navbar-search_collapsable
+              // RD Navbar Brand
+              .rd-navbar-brand
+                a.brand-name(href='index.html')
+                  +png(logoInverse2)
+
+          // RD Navbar Nav
+          .rd-navbar-nav-wrap
+            include ../includes/_nav
+
+  include ../sections/_section-slider-creative
+
+  // Presentation
+  section.bg-white(id=seeFeaturesLink)
+    .shell-fluid.shell-flex
+      .range.range-condensed
+        .cell-sm-6.cell-md-4
+          // Thumb centered
+          .thumb-centered
+            +jpg('home-creative-1-640x640')
+        .cell-sm-6.cell-md-8: .cell__inner
+          h3 Consistency is the Key
+          p Monstroid² boasts clean and crispy design, bulletproof layout consistency and intuitive navigation. The template was created by top industry leaders in web design and user experience. Improve your audience engagement and loyalty with simple and user friendly tools offered by our template.
+
+        ='\n'
+
+        .cell-sm-6.cell-md-4: .cell__inner.bg-primary
+          // Blurb minimal
+          article.blurb.blurb-minimal: .unit.unit-horizontal.unit-spacing-md
+            .unit__left
+              .blurb-minimal__icon: span.icon.linear-icon-magic-wand
+            .unit__body
+              p.blurb__title Pixel Perfect Typography
+              p It’s impossible to ignore the fact that perfect typography is a key asset of design success. We concentrated on classic proportions, great readability and better user experience to produce modern and user friendly template that adds value to any project.
+
+        .cell-sm-6.cell-md-4: .cell__inner.bg-gray-lighter
+          // Blurb minimal
+          article.blurb.blurb-minimal.blurb-minimal_gray-base: .unit.unit-horizontal.unit-spacing-md
+            .unit__left
+              .blurb-minimal__icon: span.icon.linear-icon-menu3
+            .unit__body
+              p.blurb__title Novi Builder
+              p This template comes with built-in Novi Builder. With its help you can quickly build custom HTML websites of any kind, and use our VIDE technology to accelerate your development and reduce QA time. Using this tool will provide you with lots of advantages.
+        .cell-sm-6.cell-md-4
+          // Thumb centered
+          .thumb-centered
+            +jpg('home-creative-2-640x640')
+            .thumb-centered__caption
+              p.heading-1
+                span.counter 9
+                | +
+              p.heading-5 Pre-made layouts
+
+        .cell-sm-6.cell-md-8
+          .thumb-centered.thumb-centered-md__rect
+            +jpg('images-10-1280x640')
+        .cell-sm-6.cell-md-4
+          .thumb-centered
+            +jpg('images-11-640x640')
+
+        .cell-sm-6.cell-md-4: .cell__inner.bg-gray-lighter
+          .range.range-50.range-xs-middle
+            .cell-xs-6: a.link-transparent(href='#')
+              +png('brand-1-128x111')
+            .cell-xs-6: a.link-transparent(href='#')
+              +png('brand-2-129x102')
+            .cell-xs-6: a.link-transparent(href='#')
+              +png('brand-6-134x122')
+            .cell-xs-6: a.link-transparent(href='#')
+              +png('brand-4-129x86')
+
+        .cell-sm-6.cell-md-8: .cell__inner
+          // Owl Carousel
+          .owl-carousel(data-items='1', data-stage-padding='15', data-loop='true', data-margin='30', data-sm-margin='15', data-lg-margin='30', data-dots='true')
+            .item
+              // Quote default
+              .quote-default
+                .quote-default__image
+                  +jpg('testimonials-1-120x120')
+                .quote-default__text: p.q I love to use your ready-made and beautifully looking templates. They are available at very affordable prices and they save me a lot of time, and deliver from a lot of sweat and tears!
+                p.quote-default__cite Jane Smith 
+
+            .item
+              // Quote default
+              .quote-default
+                .quote-default__image
+                  +jpg('testimonials-2-120x120')
+                .quote-default__text: p.q This template has everything I was looking for my business website to have. From easy-to-customize pages to flawlessly working web tools, Monstroid² is my number one choice!
+                p.quote-default__cite James Wilson
+
+            .item
+              // Quote default
+              .quote-default
+                .quote-default__image
+                  +jpg('testimonials-3-120x120')
+                .quote-default__text: p.q It’s great that there are such templates that are available to both professional and beginner web developers at affordable price. The job you did with this template is surely appreciated, thank you!
+                p.quote-default__cite Sam Lee
+
+        .cell-sm-6.cell-md-4
+          // Thumb centered
+          .thumb-centered
+            +jpg('home-creative-3-640x640')
+        .cell-sm-6.cell-md-4
+          // Thumb centered
+          .thumb-centered
+            +jpg('home-creative-4-640x640')
+        .cell-sm-6.cell-md-4
+          include ../sections/_section-gmap
+
+  ='\n'
+
+  // Page Footer
+  include ../sections/_footer-minimal

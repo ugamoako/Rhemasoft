@@ -1,0 +1,54 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumbs
+include ../elements/_ui-panel
+
+block variables
+  - var activeIndex = 2
+  - var pageName = 'FAQs'
+
+block page
+  // Page header
+  include ../sections/_header-default
+
+  +breadcrumbs({
+      path: [[menu[activeIndex].title, menu[activeIndex].link], [pageName]]
+  })
+
+  // Privacy Policy
+  section.section-md.bg-white
+    .shell
+      // Accordion
+      #accordion(role='tablist')
+        +panel({
+            parentId: "1",
+            panelClass: "panel-classic",
+            header: "What are the advantages of purchasing a website template?"
+        })
+          p The major advantage is price: You get a high quality design for just $20-$70. You don’t have to hire a web designer or web design studio. Second advantage is time frame: It usually takes 5-15 days for a good designer to produce a web page of such quality.
+
+        +panel({
+            parentId: "2",
+            panelClass: "panel-classic",
+            header: "Do you provide any scripts with your templates or could you do some custom programming?"
+        })
+          p Our templates do not include any additional scripts. Newsletter subscriptions, search fields, forums, image galleries (in HTML versions of Flash products) are inactive. Basic scripts can be easily added at www.TemplateTuning.com If you are not sure that the element you’re interested in is active please contact our Support Chat for clarification.
+
+        +panel({
+            parentId: "3",
+            panelClass: "panel-classic",
+            header: "What do I receive when I order a template from TemplateMonster.com?"
+        })
+          p After you complete the payment via our secure form you will receive the instructions for downloading the product. The source files in the download package can vary based on the type of the product you have purchased.
+
+        +panel({
+            parentId: "4",
+            panelClass: "panel-classic",
+            header: "In what formats are your templates available?"
+        })
+          p Website templates are available in Photoshop and HTML formats. Fonts are included with Photoshop file. In most templates, HTML format is compatible with all modern code editors and IDE. They include Atom, SublimeText etc. In our templates we also use such modern technologies as SASS, Pug, BEM and others.
+
+
+  // Page Footer
+  include ../sections/_footer-corporate

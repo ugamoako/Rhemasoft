@@ -1,0 +1,203 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-rd-video
+include ../elements/_ui-list-inline-icon
+include ../elements/_ui-rd-parallax
+
+block variables
+  - var activeIndex = 0
+  - var footerLink = true
+  - var pageName = 'Home Modern'
+
+block page
+  // Page Header
+  header.page-header
+    // RD Navbar
+    .rd-navbar-wrap
+      nav.rd-navbar(data-layout='rd-navbar-fixed', data-sm-layout='rd-navbar-fixed', data-sm-device-layout='rd-navbar-fixed', data-md-layout='rd-navbar-sidebar', data-md-device-layout='rd-navbar-fixed', data-lg-device-layout='rd-navbar-fixed', data-lg-layout='rd-navbar-sidebar', data-stick-up-clone='false', data-sm-stick-up='true' data-md-stick-up='true' data-lg-stick-up='true', data-md-stick-up-offset='1px', data-lg-stick-up-offset='1px', data-body-class='rd-navbar-absolute', data-md-hover-on='false', data-lg-hover-on='false')
+        // RD Navbar Panel
+        .rd-navbar-panel
+          button.rd-navbar-toggle(data-rd-navbar-toggle='.rd-navbar-nav-wrap'): span
+
+          // RD Navbar Brand
+          .rd-navbar-brand
+            a.brand-name(href='index.html')
+              +png(logoDefault)
+
+
+          .rd-navbar-element
+        // RD Navbar Nav
+        .rd-navbar-nav-wrap
+          include ../includes/_nav
+  ='\n'
+
+  include ../sections/_section-slider-modern
+
+  // Posts
+  section
+    .shell-fluid
+      .range.range-condensed
+        .cell-sm-6
+          // Post modern
+          article.post-modern
+            +jpg('home-modern-1-886x668')
+            .post-modern__inner
+              ul.list-inline-tag
+                li: a(href='#') Project
+                li: a(href='#') Style
+                li: a(href='#') Clean
+              h5.post-modern__title: a(href=postLink) 10 Reasons to Buy Monstroid².
+              .post-modern__divider
+
+        .cell-sm-6
+          // Post modern
+          article.post-modern
+            +jpg('home-modern-2-886x668')
+            .post-modern__inner
+              ul.list-inline-tag
+                li: a(href='#') Project
+                li: a(href='#') Style
+                li: a(href='#') Clean
+              h5.post-modern__title: a(href=postLink) Turning Your Site Into a Sales Machine.
+              .post-modern__divider
+
+        .cell-sm-4
+          // Post modern
+          article.post-modern
+            +jpg('home-modern-3-886x668')
+            .post-modern__inner
+              ul.list-inline-tag
+                li: a(href='#') Project
+                li: a(href='#') Style
+                li: a(href='#') Clean
+              h5.post-modern__title: a(href=postLink) Installing Your First HTML Template
+              .post-modern__divider
+
+        .cell-sm-4
+          // Post modern
+          article.post-modern
+            +jpg('home-modern-4-886x668')
+            .post-modern__inner
+              ul.list-inline-tag
+                li: a(href='#') Project
+                li: a(href='#') Style
+                li: a(href='#') Clean
+              h5.post-modern__title: a(href=postLink) 100% Satisfaction Guaranteed
+              .post-modern__divider
+
+        .cell-sm-4
+          // Post modern
+          article.post-modern
+            +jpg('home-modern-5-886x668')
+            .post-modern__inner
+              ul.list-inline-tag
+                li: a(href='#') Project
+                li: a(href='#') Style
+                li: a(href='#') Clean
+              h5.post-modern__title: a(href=postLink) Responsive & Retina Ready
+              .post-modern__divider
+
+  ='\n'
+
+  // The Power of Bootstrap Toolkit
+  section.section-lg.bg-white.text-center(id=seeFeaturesLink)
+    .shell
+      .range.range-md-center
+        .cell-md-10.cell-lg-8
+          h3 The Power of Bootstrap Toolkit
+          p We’ve made a huge effort to provide you with the extreme power of site building via Bootstrap Toolkit. It is one of the most modern and flexible solutions for everyone who wants their website working properly and according to the latest standards.
+  ='\n'
+
+  include ../sections/_section-brand-carousel
+
+  // Quotes
+  section.section-lg.bg-white
+    .shell
+      // Owl Carousel
+      .owl-carousel(data-items='1', data-stage-padding='15', data-loop='true', data-margin='30', data-dots='true')
+        .item
+          // Quote default
+          .quote-default
+            .quote-default__image
+              +jpg('testimonials-1-120x120')
+            .quote-default__text: p.q I love to use your ready-made and beautifully looking templates. They are available at very affordable prices and they save me a lot of time, and deliver from a lot of sweat and tears!
+            p.quote-default__cite Adam Smith
+
+        .item
+          // Quote default
+          .quote-default
+            .quote-default__image
+              +jpg('testimonials-2-120x120')
+            .quote-default__text: p.q This template has everything I was looking for my business website to have. From easy-to-customize pages to flawlessly working web tools, Monstroid² is my number one choice!
+            p.quote-default__cite James Wilson
+
+        .item
+          // Quote default
+          .quote-default
+            .quote-default__image
+              +jpg('testimonials-3-120x120')
+            .quote-default__text: p.q It’s great that there are such templates that are available to both professional and beginner web developers at affordable price. The job you did with this template is surely appreciated, thank you!
+            p.quote-default__cite Sam Lee
+  ='\n'
+
+  section.bg-primary.text-center
+    +rd-parallax({
+      "backgroundSpeed": "0.35",
+      "attrType": "media",
+      "src": "images/parallax-06.jpg",
+      "htmlSpeed": "0.1",
+      "class": 'rd-parallax-light'
+    })
+      .shell.section-lg
+        .range.range-xs-center
+          .cell-sm-10.cell-lg-8
+            h3 Haven’t Found What You Like? #[br] Browse Our Other Demos
+            p Monstroid² has everything to get you covered. Take a look at the child themes available for you. The list of themes covers most popular spheres of interest including Art & Photography, Business, Education and Design.
+            a(href='#').button.button.button-gray-base View now!
+  ='\n'
+
+  // Page Footer
+  section.section-lg.bg-white.text-center
+    .shell
+      .range.range-md-center
+        .cell-md-10.cell-lg-8
+          h3 Contact Form
+          // RD Mailform
+          form.rd-mailform.rd-mailform_style-1.text-center(data-form-output="form-output-global", data-form-type='contact', method='post', action='bat/rd-mailform.php')
+            .form-wrap.form-wrap_icon.linear-icon-man
+              input#contact-name.form-input(type="text" name="name" data-constraints='@Required')
+              label.form-label(for="contact-name") Your name
+
+            .form-wrap.form-wrap_icon.linear-icon-envelope
+              input#contact-email.form-input(type="email" name="email" data-constraints="@Email @Required")
+              label.form-label(for="contact-email") Your e-mail
+
+            .form-wrap.form-wrap_icon.linear-icon-telephone
+              input#contact-phone.form-input(type="text" name="phone" data-constraints='@Numeric')
+              label.form-label(for="contact-phone") Your phone
+
+            .form-wrap.form-wrap_icon.linear-icon-feather
+              textarea#contact-message.form-input(name="message" data-constraints="@Required")
+              label.form-label(for="contact-message") Your message
+
+            button(type="submit").button.button-primary send
+  ='\n'
+
+  // Footer minimal
+  footer.footer-minimal
+    .shell
+      ul.list-inline-sm.footer-minimal__list
+        li: a.icon.icon-sm.icon-primary.fa.fa-facebook(href='#')
+        li: a.icon.icon-sm.icon-primary.fa.fa-twitter(href='#')
+        li: a.icon.icon-sm.icon-primary.fa.fa-google-plus(href='#')
+        li: a.icon.icon-sm.icon-primary.fa.fa-vimeo(href='#')
+        li: a.icon.icon-sm.icon-primary.fa.fa-youtube(href='#')
+        li: a.icon.icon-sm.icon-primary.fa.fa-pinterest(href='#')
+      p.rights
+        span!=brandName
+        span &nbsp;
+        span(id="copyright-year")
+        | .
+        if(footerLink)
+        // {%FOOTER_LINK}

@@ -1,0 +1,55 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumbs
+include ../elements/_ui-panel
+
+block variables
+  - var activeIndex = 7
+  - var pageName = 'Toggles'
+
+block page
+  // Page header
+  include ../sections/_header-default
+
+  +breadcrumbs({
+    path: [[menu[activeIndex].title, menu[activeIndex].link], [pageName]]
+  })
+
+  section.section-md.bg-white
+    .shell
+      // Accordion
+      #accordion(role='tablist')
+        +panel({
+            parentId: "1",
+            panelClass: "panel-classic",
+            header: "Consistency is the Key"
+        })
+          p Monstroid² boasts clean and crispy design, bulletproof layout consistency and intuitive navigation. The template was created by top industry leaders in web design and user experience. Improve your audience engagement and loyalty with simple and user friendly tools offered by our template.
+
+        +panel({
+            parentId: "2",
+            panelClass: "panel-classic",
+            header: "The Power of Bootstrap Toolkit"
+        })
+          p Monstroid² boasts clean and crispy design, bulletproof layout consistency and intuitive navigation. The template was created by top industry leaders in web design and user experience. Improve your audience engagement and loyalty with simple and user friendly tools offered by our template.
+
+        +panel({
+            parentId: "3",
+            panelClass: "panel-classic",
+            header: "Content Driven Design"
+        })
+          p Monstroid² boasts clean and crispy design, bulletproof layout consistency and intuitive navigation. The template was created by top industry leaders in web design and user experience. Improve your audience engagement and loyalty with simple and user friendly tools offered by our template.
+
+        +panel({
+            parentId: "4",
+            panelClass: "panel-classic",
+            header: "Pixel Perfect Typography"
+        })
+          p Monstroid² boasts clean and crispy design, bulletproof layout consistency and intuitive navigation. The template was created by top industry leaders in web design and user experience. Improve your audience engagement and loyalty with simple and user friendly tools offered by our template.
+
+  ='\n'
+
+  // Page Footer
+  include ../sections/_footer-corporate
+
