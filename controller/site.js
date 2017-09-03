@@ -44,7 +44,7 @@ router.get('/login', function(req, res, next){
     //db.logregister.find(function(err, data){
         //if(err){
             //res.send(err);
-        //}
+        //}4rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrre4r5                                          
         //console.log(data);
         //res.json(data);
     //});

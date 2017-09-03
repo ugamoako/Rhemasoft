@@ -198,7 +198,37 @@ block page
 
   include sections/_section-cta-6
   include sections/_section-brand-carousel
-
+  section.section-lg.amazing-features.text-center
+    .shell
+      .range.range-50
+        .cell-sm-6.cell-md-5
+        .cell-sm-6.cell-md-5
+          h3 AMAZING FEATURES
+          h5 Not all modern apps are made equal but our products have a lot of features that you may find useful.
+          ul.list-bordered
+            li: .unit.unit-vertical.unit-middle.unit-spacing-sm
+              .unit__left: span.icon.icon-md.icon-primary.linear-icon-map-marker
+              .unit__body: dl.list-terms-modern 
+                dt BEAUTIFUL, MODERN DESIGN
+                //dd: ul.list-semicolon 
+                  li Our apps offer our customers responsive and functional design that looks beautiful and modern in comparison with many other products on the market of free apps.  
+            li: .unit.unit-vertical.unit-middle.unit-spacing-sm
+              .unit__left: span.icon.icon-md.icon-primary.linear-icon-gear
+              .unit__body: dl.list-term-modern
+                dt EASY TO SET UP
+                //If you are looking for a specific app with a feature of extensive customization, our apps can become your perfect choice. From changing the look of the interface to installing new modules, we got you covered.  
+  .shell.subscribe.text-center
+    h2 SUBSCRIBE TO OUR NEWSLETTER
+    h4.txtfooterone Subscribe to get latest news and product updates
+    p.text-center
+    // RD Mailform
+    form.rd-mailform.rd-mailform_style-1.rd-mailform_sizing-1.rd-mailform-inline-flex.text-center#form-subscribe
+      .form-wrap.form-wrap_icon.linear-icon-envelope
+        input#subscription-email.form-input(type="email" name="email" data-constraints="@Email @Required")
+        label.form-label(for="subscription-email").txtfootertextbox Your Email address
+      button(type="submit").button.button-primary#txtfooterbtn Subscribe
+    //.thank-msg-notify.hide-me Спасибо, что подписались на наши новости!
+    
   // Page Footer
   include sections/_footer-corporate
 
