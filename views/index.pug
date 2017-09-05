@@ -19,13 +19,10 @@ block page
   // Presentation
   section.section-lg.bg-white.text-center(id=seeFeaturesLink)
     .shell
-      .range.range-md-center
+      .range.range-md-center.animated.fadeInUpSmall.wow.slideInUp
         .cell-md-10.cell-lg-8
-          h3
-            | Welcome to Rhemasoft
-            br
-            //| a Variety of Features
-          p A place where we build fast and reliable mobile, web and desktop  Apps for your business growth. THe satisfaction of our customers is our pride, so we serve you better.
+          h3 WELCOME TO RHEMASOFT   
+          h6 A place where we build fast and reliable mobile, web and desktop  Apps for your business growth. The satisfaction of our customers is our pride, so we serve you better.
       .range.range-50
         .cell-sm-6.cell-lg-3
           +thumbnail-classic({
@@ -54,7 +51,43 @@ block page
   ='\n'
 
   // Consistency is the Key
-  section.section-lg.bg-primary
+  section.section-lg.bg-white.text-center.bg-primary(id=seeFeaturesLink)
+    .shell
+      .range.range-md-center.animated.fadeInUpSmall.wow.slideInUp
+        .cell-md-10.cell-lg-8
+          h3.heading-two SIMPLE. STUNNING. SMART
+            |
+          h5.
+             Our success is driven by the highest quality customer service.
+             We can meet the requirements even of the whimsical clients; there
+             are no complex tasks for us! Thanks for your choice.
+      .range.range-md-center.animated.fadeInUpSmall.wow.slideInUp
+        .cell-sm-4.cell-md-4.cell-lg-4
+          img.heading-icons(src="/images/mt-0626-home-icon5.png", alt="")
+          h4.heading-text FULLY RESPONSIVE
+          p.
+            Our apps have fully responsive interface and
+            design that allow our users to run our products
+            on any modern device or gadget, with all their 
+            function available on the any platform.
+        .cell-sm-4.cell-md-4.cell-lg-4
+          img.heading-icons(src="/images/mt-0626-home-icon6.png", alt="")
+          h4.heading-text UNIQUE DESIGN
+          p.
+            With so many mobile apps being release in such
+            a short period of time, our designers manage
+            to create really catchy and unique designs
+            for our products to stand out.
+          
+        .cell-sm-4.cell-md-4.cell-lg-4
+          img.heading-icons(src="/images/mt-0626-home-icon7.png", alt="")
+          h4.heading-text 24/7 SUPPORT
+          p.
+            Soft App support center provides full support 
+            and essentail maintenance to ensure issues
+            you may have are eliminated early and you get
+            the maximum comfort from using our apps.           
+  //section.section-lg.bg-primary
     .shell
       .range.range-sm-center.range-md-reverse.range-md-middle.range-md-justify.range-50
         .cell-sm-9.cell-md-5
@@ -68,7 +101,7 @@ block page
   ='\n'
 
   // Counters
-  section.section-lg.bg-primary.text-center
+  //section.section-lg.bg-primary.text-center
     .shell
       .range.range-sm-center.range-50
         .cell-sm-6.cell-md-3
@@ -164,7 +197,7 @@ block page
   include sections/_section-cta-1
 
   // Share Your Company Testimonials
-  section.section-lg.bg-white.text-center
+  //section.section-lg.bg-white.text-center
     .shell
       h3 Share Your Company Testimonials
       .range.range-50
@@ -196,27 +229,21 @@ block page
             p.quote-default__cite Sam Lee
   ='\n'
 
-  include sections/_section-cta-6
+  //include sections/_section-cta-6
   include sections/_section-brand-carousel
-  section.section-lg.amazing-features.text-center
+  section.section-lg.amazing-features
     .shell
       .range.range-50
         .cell-sm-6.cell-md-5
         .cell-sm-6.cell-md-5
           h3 AMAZING FEATURES
           h5 Not all modern apps are made equal but our products have a lot of features that you may find useful.
-          ul.list-bordered
-            li: .unit.unit-vertical.unit-middle.unit-spacing-sm
-              .unit__left: span.icon.icon-md.icon-primary.linear-icon-map-marker
-              .unit__body: dl.list-terms-modern 
-                dt BEAUTIFUL, MODERN DESIGN
-                //dd: ul.list-semicolon 
-                  li Our apps offer our customers responsive and functional design that looks beautiful and modern in comparison with many other products on the market of free apps.  
-            li: .unit.unit-vertical.unit-middle.unit-spacing-sm
-              .unit__left: span.icon.icon-md.icon-primary.linear-icon-gear
-              .unit__body: dl.list-term-modern
-                dt EASY TO SET UP
-                //If you are looking for a specific app with a feature of extensive customization, our apps can become your perfect choice. From changing the look of the interface to installing new modules, we got you covered.  
+          
+          ul
+            li BEAUTIFUL, MODERN DESIGN
+            li Our apps offer our customers responsive and functional design that looks beautiful and modern in comparison with many other products on the market of free apps.  
+            li EASY TO SET UP
+            li If you are looking for a specific app with a feature of extensive customization, our apps can become your perfect choice. From changing the look of the interface to installing new modules, we got you covered.  
   .shell.subscribe.text-center
     h2 SUBSCRIBE TO OUR NEWSLETTER
     h4.txtfooterone Subscribe to get latest news and product updates

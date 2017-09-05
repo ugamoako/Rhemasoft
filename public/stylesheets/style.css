@@ -113,10 +113,10 @@ body {
   color: #888; }
   @media (min-width: 768px) {
     body {
-      font-size: 16px; } }
+      font-size: 14px; } }
   @media (min-width: 1200px) {
     body {
-      font-size: 18px; } }
+      font-size: 15px; } }
 
 a {
   display: inline-block;
@@ -21444,4 +21444,14 @@ yx-axis
   }
   .amazing-features{
     background-color:#8e020e;
+  }
+  .heading-two{
+    margin-top:30px;
+    margin-bottom:20px;
+  }
+  .heading-icons{
+    margin-bottom:20px;
+  }
+  .heading-text{
+    color: #ffc045 !important;
   }
