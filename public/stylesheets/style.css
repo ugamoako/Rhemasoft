@@ -11146,8 +11146,8 @@ html.boxed .rd-navbar--is-clone {
   position: fixed;
   right: 15px;
   bottom: 15px;
-  width: 58px;
-  height: 58px;
+  width: 55px;
+  height: 55px;
   border-radius: 100%;
   font-size: 24px;
   line-height: 58px;
@@ -11164,7 +11164,7 @@ html.boxed .rd-navbar--is-clone {
     font-family: 'Linearicons'; }
   .ui-to-top, .ui-to-top:active, .ui-to-top:focus {
     color: #fff;
-    background: #27bb9a; }
+    background: #ffc045; }
   .ui-to-top:hover {
     color: #fff;
     background: #000; }
@@ -21454,4 +21454,13 @@ yx-axis
   }
   .heading-text{
     color: #ffc045 !important;
+  }
+  .linear-inline{
+    display:inline;
+    
+  }
+  .linear{
+    font-size: 20px;
+    margin-right: 10px;
+    color:white;
   }

@@ -220,7 +220,7 @@ block page
             p.quote-default__cite James Wilson
 
         .cell-sm-6.cell-md-4
-          // Quote default
+            //Quote default
           .quote-default.quote-default_left-v2
             .quote-default__image
               +jpg('testimonials-3-120x120')
@@ -232,18 +232,23 @@ block page
   //include sections/_section-cta-6
   include sections/_section-brand-carousel
   section.section-lg.amazing-features
-    .shell
+    .shell.animated.fadeInUpSmall.wow.slideInUp
       .range.range-50
-        .cell-sm-6.cell-md-5
-        .cell-sm-6.cell-md-5
-          h3 AMAZING FEATURES
-          h5 Not all modern apps are made equal but our products have a lot of features that you may find useful.
+        .cell-sm-6.cell-md-8
+          +png('mac-frame-1247x764')
+        .cell-sm-6.cell-md-4
+          h4.heading-text.animated.fadeInUpSmall.wow.slideInUp AMAZING FEATURES
+          h6.text-justify.animated.fadeInUpSmall.wow.slideInUp(style="color:white") Not all modern apps are made equal but our products have a lot of features that you may find useful.
           
           ul
-            li BEAUTIFUL, MODERN DESIGN
-            li Our apps offer our customers responsive and functional design that looks beautiful and modern in comparison with many other products on the market of free apps.  
-            li EASY TO SET UP
-            li If you are looking for a specific app with a feature of extensive customization, our apps can become your perfect choice. From changing the look of the interface to installing new modules, we got you covered.  
+            li.animated.fadeInUpSmall.wow.slideInUp
+              span.icon.linear-icon-screen.linear
+              .heading-text.linear-inline BEAUTIFUL, MODERN DESIGN
+            li.animated.fadeInUpSmall.wow.slideInUp.text-justify Our apps offer our customers responsive and functional design that looks beautiful and modern in comparison with many other products on the market of free apps.  
+            li.animated.fadeInUpSmall.wow.slideInUp
+              span.icon.linear-icon-laptop.linear
+              .heading-text.linear-inline EASY TO SET UP
+            li.animated.fadeInUpSmall.wow.slideInUp.text-justify If you are looking for a specific app with a feature of extensive customization, our apps can become your perfect choice. From changing the look of the interface to installing new modules, we got you covered.  
   .shell.subscribe.text-center
     h2 SUBSCRIBE TO OUR NEWSLETTER
     h4.txtfooterone Subscribe to get latest news and product updates
