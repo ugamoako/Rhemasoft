@@ -1,50 +1,69 @@
-include ../elements/_ui-rd-video
-// Swiper
-section
-  .swiper-container.swiper-slider.swiper-slider_fullheight(data-simulate-touch="false", data-loop='false', data-autoplay='false')
+.shell(style="background-color:#ffc045")
+  //.visible-xs.text-center
+    include ../sections/_section-download-btns
+  .swiper-container.swiper-slider.swiper-slider-custom(data-simulate-touch="false")
     .swiper-wrapper
-      .swiper-slide.bg-primary(data-slide-bg='images/banner-slide-2-1920x980.jpg')
+      .swiper-slide(data-slide-bg='images/mobile-slide-1-1920x1080.png')
+        .swiper-slide-caption
+          .shell.pull-right
+            //h4(data-caption-animate='fadeInUpSmall', data-wow-duration='5s' style="color:white; text-shadow: 1px 1px black;").txtslideoneH Выгодное предложение!
+            //ul(style="padding-left:20px; color:white")
+              li
+                h6.txtslideoneTone(data-caption-animate='fadeInUpSmall', data-caption-delay='200') Стоимость ниже на 24%, чем у простых служб эвакуации.
+              li
+                h6.txtslideoneTtwo(data-caption-animate='fadeInUpSmall', data-caption-delay='200') Все исполнители работают по единому тарифу.
+              li
+                h6.txtslideoneTthree(data-caption-animate='fadeInUpSmall', data-caption-delay='200') Видная полная детализация по каждому завершенному заказу.
+            //.hidden-xs
+              include ../sections/_section-download-btns
+      .swiper-slide(data-slide-bg='images/mobile-slide-2-1920x1080.png')
+        .swiper-slide-caption(style="padding-left:20px; color:white")
+          .shell.pull-left
+            //h4(data-caption-animate='fadeInUpSmall', data-wow-duration='5s' style="color:white; text-shadow: 1px 1px black;").txtslidetwoH Следи за выполнением заказа!
+            //ul(style="padding-left:20px;")
+              li
+                h6(data-caption-animate='fadeInUpSmall', data-caption-delay='200').txtslidetwoTone Отслеживай эвакуатора в реальном времени.
+              li
+                h6(data-caption-animate='fadeInUpSmall', data-caption-delay='200').txtslidetwoTtwo Оплата только после оказания <br> услуги.
+              li
+                h6(data-caption-animate='fadeInUpSmall', data-caption-delay='200').txtslidetwoTthree Точный расчет по заказу.
+            //.hidden-xs
+              include ../sections/_section-download-btns
+      .swiper-slide(data-slide-bg='images/mobile-slide-7-1920x1080.png')
+        .swiper-slide-caption(style="padding-left:20px; color:white")
+          .shell.pull-left
+            //h4(data-caption-animate='fadeInUpSmall', data-wow-duration='5s' style="color:white; text-shadow: 1px 1px black;").txtslidethreeH Проверенные временем!
+            //ul(style="padding-left:20px;")
+              li
+                h6(data-caption-animate='fadeInUpSmall', data-caption-delay='200').txtslidethreeTone Только проверенные партнеры.
+              li
+                h6(data-caption-animate='fadeInUpSmall', data-caption-delay='200').txtslidethreeTtwo Оценка работы каждого эвакуатора пользователями.
+              li
+                h6(data-caption-animate='fadeInUpSmall', data-caption-delay='200').txtslidethreeTthree Гарантия защиты банковских переводов<br> системой безопасности CloudPayments.
+            //.hidden-xs
+              include ../sections/_section-download-btns
+      .swiper-slide(data-slide-bg='images/mobile-slide-4-1920x1080.png')
         .swiper-slide-caption.text-center
-          .shell
-            h1(data-caption-animate='fadeInUpSmall') Software
-            h3(data-caption-animate='fadeInUpSmall') We develop state of the art mobile apps, websites, destop Appliactions.
-            a.button.button-gray-light-outline(data-caption-animate='fadeInUpSmall', data-caption-delay='200', href=getTemplateLink) Buy template
-
-      .swiper-slide.bg-gray-dark(data-slide-bg='images/banner-slide-3-1920x980.jpg')
+          //h3(data-caption-animate='fadeInUpSmall').
+            Только проверенные партнеры,
+            Честная оценка работы каждого эвакуатора пользователями и
+            Гарантия защиты банковских переводов системой безопасности
+            <a href="#" style="text-decoration: underline;">CloudPayments</a>
+          //ul
+            li
+              h5 Только проверенные партнеры
+            li
+              h5 Честная оценка работы каждого эвакуатора пользователями
+            li
+              h5 Гарантия защиты банковских переводов системой безопасности <a href="#" style="color:#808080;background-color:transparent;text-decoration: underline;">CloudPayments</a>
+          //include ../sections/_section-download-btns
+      //.swiper-slide(data-slide-bg='images/mobile_slide6.jpg')
         .swiper-slide-caption.text-center
-          .shell
-            h1(data-caption-animate='fadeInUpSmall')
-              span Rhemasoft
-              sup.text-primary &reg;
-            h3(data-caption-animate='fadeInUpSmall', data-caption-delay='200') Discover how we use Information Technology to transform Businesses.
-            .group-lg.group-middle
-              a.button.button-primary(data-caption-animate='fadeInUpSmall', data-caption-delay='350', href='#' + seeFeaturesLink, data-custom-scroll-to=seeFeaturesLink) See Features
-              a.button.button-gray-light-outline(data-caption-animate='fadeInUpSmall', data-caption-delay='350', href=getTemplateLink) Buy template
-
-      //.swiper-slide.swiper-slide_video.bg-gray-dark.rd-video-bg.rd-video-bg-overlay
-        +rd-video({
-          "src": "video/video",
-          "imageXS": "144",
-          "imageSM": "144",
-          "imageMD": "144",
-          "imageLG": "144",
-          "imageXLG": "144",
-          "autoplay": "true",
-          "preload": "metadata"
-        })
-          .swiper-slide-caption.text-center
-            .shell
-              h2(data-caption-animate='fadeInUpSmall') Built by geeks & used by humans
-              h5.text-width-2.block-centered(data-caption-animate='fadeInUpSmall', data-caption-delay='200') Monstroid#[sup 2] aims to satisfy real needs of real projects. We've got a pack of tools for that.
-              .group-lg.group-middle
-                a.button.button-gray-base(data-caption-animate='fadeInUpSmall', data-caption-delay='350', href='#' + seeFeaturesLink, data-custom-scroll-to=seeFeaturesLink) Take a tour
-                a.button.button-primary(data-caption-animate='fadeInUpSmall', data-caption-delay='350', href=getTemplateLink) Buy template
-
+          h3(data-caption-animate='fadeInUpSmall') Закажи эвакуатор в два клика
+          include ../sections/_section-download-btns
     // Swiper Pagination
     .swiper-pagination
 
     // Swiper Navigation
     .swiper-button-prev.linear-icon-chevron-left
     .swiper-button-next.linear-icon-chevron-right
-
-='\n'
