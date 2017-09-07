@@ -1,21 +1,15 @@
-.shell(style="background-color:#ffc045")
+.shell(style="background-color:#8e020e")
   //.visible-xs.text-center
     include ../sections/_section-download-btns
   .swiper-container.swiper-slider.swiper-slider-custom(data-simulate-touch="false")
     .swiper-wrapper
       .swiper-slide(data-slide-bg='images/mobile-slide-1-1920x1080.png')
-        .swiper-slide-caption
-          .shell.pull-right
-            //h4(data-caption-animate='fadeInUpSmall', data-wow-duration='5s' style="color:white; text-shadow: 1px 1px black;").txtslideoneH Выгодное предложение!
-            //ul(style="padding-left:20px; color:white")
-              li
-                h6.txtslideoneTone(data-caption-animate='fadeInUpSmall', data-caption-delay='200') Стоимость ниже на 24%, чем у простых служб эвакуации.
-              li
-                h6.txtslideoneTtwo(data-caption-animate='fadeInUpSmall', data-caption-delay='200') Все исполнители работают по единому тарифу.
-              li
-                h6.txtslideoneTthree(data-caption-animate='fadeInUpSmall', data-caption-delay='200') Видная полная детализация по каждому завершенному заказу.
-            //.hidden-xs
-              include ../sections/_section-download-btns
+        .swiper-slide-caption.pull-top
+          .shell
+            h3(data-caption-animate='fadeInUpSmall', data-wow-duration='5s' style="color: white;") Responsive designs with multipurpose functionalities.
+          //.shell.pull-left
+            h3(data-caption-animate='fadeInUpSmall', data-wow-duration='5s' style="color: white;") Responsive designs with multipurpose functionalities.
+
       .swiper-slide(data-slide-bg='images/mobile-slide-2-1920x1080.png')
         .swiper-slide-caption(style="padding-left:20px; color:white")
           .shell.pull-left
@@ -44,11 +38,11 @@
               include ../sections/_section-download-btns
       .swiper-slide(data-slide-bg='images/mobile-slide-4-1920x1080.png')
         .swiper-slide-caption.text-center
-          //h3(data-caption-animate='fadeInUpSmall').
-            Только проверенные партнеры,
-            Честная оценка работы каждого эвакуатора пользователями и
-            Гарантия защиты банковских переводов системой безопасности
-            <a href="#" style="text-decoration: underline;">CloudPayments</a>
+          .shell
+            .range.range-50
+              .cell-sm-8.cell-md-8
+                h3(data-caption-animate='fadeInUpSmall' style="color:white; padding-top:143px") Join our online store with your products to reach multitude of consumers or get a customized e-commerce site for yourself. 
+                
           //ul
             li
               h5 Только проверенные партнеры

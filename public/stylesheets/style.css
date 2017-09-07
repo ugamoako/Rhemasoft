@@ -203,7 +203,7 @@ h2,
 
 h3,
 .heading-3 {
-  font-size: 22px;
+  font-size: 20px;
   line-height: 1.45;
   font-weight: 200; }
   @media (min-width: 768px) {
@@ -21463,4 +21463,9 @@ yx-axis
     font-size: 20px;
     margin-right: 10px;
     color:white;
+  }
+  .pull-top{
+    top:-210px;
+    text-align:center;
+    color: #8e020e;
   }
