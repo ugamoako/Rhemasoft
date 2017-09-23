@@ -18,10 +18,22 @@
   },
   "homepage": "https://github.com/ugamoako/rhemasoft#readme",
   "dependencies": {
+    "bcryptjs": "*",
     "body-parser": "^1.17.2",
+    "connect-flash": "*",
+    "cookie-parser": "^1.4.1",
     "ejs": "^2.5.6",
     "express": "^4.15.3",
+    "express-messages": "*",
+    "express-session": "*",
+    "express-validator": "*",
     "mongojs": "^2.4.0",
-    "pug": "^2.0.0-rc.2"
+    "pug": "^2.0.0-rc.2",
+    "mongodb": "*",
+    "mongoose": "*",
+    "passport": "*",
+    "passport-http": "*",
+    "passport-local": "*"
+
   }
 }

@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var mongojs = require('mongojs');
+var user = require('./user');
 var db = mongojs('mongodb://rhemas:584223@ds159892.mlab.com:59892/rhemadb', ['logregister']);
 var staticPageHandler = function(req, res){
 
@@ -49,6 +50,32 @@ router.get('/login', function(req, res, next){
         //res.json(data);
     //});
 });
+
+router.post('/register',function(req, res){
+    var name = req.body.usrname;
+    var email = req.body.email;
+    var password = req.body.password;
+    var password2 = req.body.password2;
+    
+    req.checkBody('password2', 'passwords do not match').equals(req.body.password);
+
+    var errors = req.validationErrors();
+
+    if(errors){
+        res.render('register',{
+            errors:errors
+        });
+    } else {
+        var newUser = new user({
+            name: name,
+            email:email,
+            password:password
+            
+        })
+    }
+ 
+ });
+
 router.notFoundHandler = notFoundHandler;
 router.errorHandler = errorHandler;
 module.exports = router;
