@@ -12,7 +12,7 @@ header.page-header
             +png(logoDefault)
 
       // RD Navbar Top Panel
-      .rd-navbar-top-panel.rd-navbar-top-panel_extended: .rd-navbar-top-panel__main
+      //.rd-navbar-top-panel.rd-navbar-top-panel_extended: .rd-navbar-top-panel__main
         .rd-navbar-top-panel__toggle.rd-navbar-fixed__element-1.rd-navbar-static--hidden(data-rd-navbar-toggle='.rd-navbar-top-panel__main'): span
         .rd-navbar-top-panel__content
           //.rd-navbar-top-panel__content-top
@@ -71,4 +71,7 @@ header.page-header
 
           include ../includes/_navbar-search
           .rd-navbar-search_collapsable
+            .rd-navbar-brand
+              a.brand-name(href='/')
+                +png(logoDefault)
             include ../includes/_nav

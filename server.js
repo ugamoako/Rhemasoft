@@ -1,4 +1,5 @@
 var config = require('./config.json');
+//var particlesJS = require('./particles.json');
 var express = require('express');
 var path = require('path');
 var bodyParser = require('body-parser');
@@ -64,7 +65,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:false}));
 app.use('/', require('./controller/site.js'));
 app.use('/user', require('./controller/user.js'));
-
+/*particlesJS.load('particles-js', 'particles.json', function() {
+  console.log('particles.js loaded - callback');
+});*/
 app.listen(config.http_port, function(){
     console.log('Server started on port'+ config.http_port);
 })

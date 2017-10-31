@@ -8570,7 +8570,9 @@ html:not(.lt-ie10) .not-animated {
       transform: rotate(-45deg); }
 
 .rd-navbar-brand {
-  line-height: 1; }
+  line-height: 1; 
+  display: inline-block;
+  margin-right: 20px;}
 
 .rd-navbar-search {
   position: relative; }
@@ -9693,7 +9695,8 @@ html:not(.lt-ie10) .not-animated {
   .rd-navbar-static .rd-navbar-nav {
     margin: -13px -13px 0;
     font-size: 0;
-    line-height: 0; }
+    line-height: 0;
+    display:inline; }
     .rd-navbar-static .rd-navbar-nav > li {
       margin-top: 13px;
       padding: 0 13px; }
@@ -21469,3 +21472,18 @@ yx-axis
     text-align:center;
     color: #8e020e;
   }
+  .particles-js-canvas-el {
+    top: 0;
+    left: 0;
+    position: absolute;
+    
+}
+  #particles-js{
+  width: 100%;
+  height: 100%;
+  background-color: #b61924;
+  background-image: url('');
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
