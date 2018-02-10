@@ -464,7 +464,7 @@ code,
   max-width: 100%;
   border: 1px solid;
   border-radius: 3px;
-  padding: 12px 30px;
+  padding: 8px 30px;
   font-size: 12px;
   line-height: 24px;
   font-family: "Libre Franklin", Helvetica, Arial, sans-serif;
@@ -477,7 +477,7 @@ code,
   text-align: center; }
   @media (min-width: 992px) {
     .button {
-      padding: 16px 40px;
+      padding: 8px 40px;
       font-size: 12px;
       line-height: 24px; } }
 
