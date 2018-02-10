@@ -11,19 +11,91 @@ block variables
 
 block page
   // Page header
-  include ../sections/_header-default
+  include ../sections/_header-corporate
 
-  +breadcrumbs({
+  //+breadcrumbs({
       path: [[menu[activeIndex].title, menu[activeIndex].link], [pageName]]
-  })
+  //})
 
-  section
-    include ../sections/_section-gmap
-
-  section.section-md.bg-white
+  section.margins
+    //include ../sections/_section-gmap
+    .range.range-md-center.animated.fadeInUpSmall.wow.slideInUp.assistant
+      .cell-sm-6.cell-md-6.cell-lg-6
+        .cell-sm-12.cell-md-12.cell-lg-12
+          h4 Welcome to Rhemasoft Technologies Support.
+        .cell-sm-12.cell-md-12.cell-lg-12  
+          h6 Get fast, free assistance from our Virtual Agent.
+        .cell-sm-12.cell-md-12.cell-lg-12  
+          button(type="text" style="margin-top: 12px").button.button-primary Ask Virtual Agent
+      .cell-sm-6.cell-md-6.cell-lg-6
+        .common-image
+          img(src="/images/assistant.svg", alt="")
+    .range.range-md-center.animated.fadeInUpSmall.wow.slideInUp
+      h5 Which product do you need help with?
+      .range.range-50.text-center
+        .cell-sm-6.cell-md-3.cell-lg-2
+          i.fa.fa-university.fa-4x.faf
+          h6.heading-text School Mgt. App
+        .cell-sm-6.cell-md-3.cell-lg-2  
+          i.fa.fa-lock.fa-4x.faf
+          h6.heading-text Rhemasoft account
+        .cell-sm-6.cell-md-3.cell-lg-2
+          i.fa.fa-shopping-cart.fa-4x.faf
+          h6.heading-text Rhemasoft Store
+        .cell-sm-6.cell-md-3.cell-lg-2  
+          i.fa.fa-gamepad.fa-4x.faf
+          h6.heading-text Xbox
+        .cell-sm-6.cell-md-3.cell-lg-2
+          i.fa.fa-trophy.fa-4x.faf
+          h6.heading-text PC games
+        .cell-sm-6.cell-md-3.cell-lg-2  
+          i.fa.fa-bug.fa-4x.faf
+          h6.heading-text Anti Virus
+        .cell-sm-6.cell-md-3.cell-lg-2
+          i.fa.fa-laptop.fa-4x.faf
+          h6.heading-text Laptop
+        .cell-sm-6.cell-md-3.cell-lg-2  
+          i.fa.fa-desktop.fa-4x.faf
+          h6.heading-text Desktop
+        .cell-sm-6.cell-md-3.cell-lg-2
+          i.fa.fa-android.fa-4x.faf
+          h6.heading-text Mobile App
+        .cell-sm-6.cell-md-3.cell-lg-2  
+          i.fa.fa-shopping-bag.fa-4x.faf
+          h6.heading-text MyStore
+        .cell-sm-6.cell-md-3.cell-lg-2
+          i.fa.fa-signal.fa-4x.faf
+          h6.heading-text Networking
+        .cell-sm-6.cell-md-3.cell-lg-2  
+          i.fa.fa-apple.fa-4x.faf
+          h6.heading-text OS
+  section.section-lg.bg-white.text-center.bg-primary
     .shell
-      .range.range-50
-        .cell-sm-5.cell-md-4
+      .range.range-md-center.animated.fadeInUpSmall.wow.slideInUp
+        .cell-sm-3.cell-md-3
+          //img.heading-icons(src="/images/mt-0626-home-icon5.png", alt="")
+          i.fa.fa-location-arrow.fa-4x
+          h4.heading-text ADDRESS
+          p Tantra Hill, Titus Glovar Avenue
+        .cell-sm-3.cell-md-3
+          //img.heading-icons(src="/images/mt-0626-home-icon5.png", alt="")
+          i.fa.fa-phone.fa-4x
+          h4.heading-text call us
+          p
+            a(href='callto:#') (800) 123-0045
+            ='; '
+            a(href='callto:#') (800) 123-0046
+        .cell-sm-3.cell-md-3
+          //img.heading-icons(src="/images/mt-0626-home-icon5.png", alt="")
+          i.fa.fa-envelope-o.fa-4x
+          h4.heading-text EMAIL US
+          p info@rhemasoftgh.com
+        .cell-sm-3.cell-md-3
+          //img.heading-icons(src="/images/mt-0626-home-icon5.png", alt="")
+          i.fa.fa-clock-o.fa-4x
+          h4.heading-text OPENING HOURS
+          p Mn-Fr: 10 am-8 pm
+        //.cell-sm-5.cell-md-4
           h3 Contact Details
           ul.list-xs.contact-info
             li
@@ -47,7 +119,7 @@ block page
               dl.list-terms-minimal
                 dt We are open
                 dd Mn-Fr: 10 am-8 pm
-            li
+            //li
               +list-inline-icon({
                   list_class: 'list-inline-sm',
                   items: [
@@ -58,32 +130,34 @@ block page
                       'icon-sm fa-youtube',
                       'icon-sm fa-pinterest-p']
               })
-        .cell-sm-7.cell-md-8
+        //.cell-sm-7.cell-md-8
           h3 Let’s Get in Touch
           // RD Mailform
           form.rd-mailform.rd-mailform_style-1(data-form-output="form-output-global", data-form-type='contact', method='post', action='bat/rd-mailform.php')
-            .form-wrap.form-wrap_icon.linear-icon-man
-              input#contact-name.form-input(type="text" name="name" data-constraints='@Required')
-              label.form-label(for="contact-name") Your name
+            .form-group
+              .col-lg-4.col-md-4.col-sm-12
+                .form-wrap.form-wrap_icon.linear-icon-man
+                  input#contact-name.form-input(type="text" name="name" data-constraints='@Required')
+                  label.form-label(for="contact-name") Your name
+              .col-lg-4.col-md-4.col-sm-12
+                .form-wrap.form-wrap_icon.linear-icon-envelope
+                  input#contact-email.form-input(type="email" name="email" data-constraints="@Email @Required")
+                  label.form-label(for="contact-email") Your e-mail
+              .col-lg-4.col-md-4.col-sm-12
+                .form-wrap.form-wrap_icon.linear-icon-telephone
+                  input#contact-phone.form-input(type="text" name="phone" data-constraints='@Numeric')
+                  label.form-label(for="contact-phone") Your phone
+              .col-lg-12.col-md-12.col-sm-12
+                .form-wrap.form-wrap_icon.linear-icon-feather
+                  textarea#contact-message.form-input(name="message" data-constraints="@Required")
+                  label.form-label(for="contact-message") Your message
+              .col-lg-12.col-md-12.col-sm-12
+                button(type="submit" style="margin-top: 12px").button.button-primary send
 
-            .form-wrap.form-wrap_icon.linear-icon-envelope
-              input#contact-email.form-input(type="email" name="email" data-constraints="@Email @Required")
-              label.form-label(for="contact-email") Your e-mail
-
-            .form-wrap.form-wrap_icon.linear-icon-telephone
-              input#contact-phone.form-input(type="text" name="phone" data-constraints='@Numeric')
-              label.form-label(for="contact-phone") Your phone
-
-            .form-wrap.form-wrap_icon.linear-icon-feather
-              textarea#contact-message.form-input(name="message" data-constraints="@Required")
-              label.form-label(for="contact-message") Your message
-
-            button(type="submit").button.button-primary send
 
 
 
-
-  ='\n'
+  //='\n'
 
   // Page Footer
   include ../sections/_footer-corporate

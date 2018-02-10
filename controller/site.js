@@ -24,31 +24,32 @@ var staticPageHandler = function(req, res){
     })
 }
 
-
+var supportPageHandler = function(req, res){
+    res.placeholders = {
+        title: 'Contact us',
+        description: 'Our contact information'
+    };
+    res.render('pages/contacts', res.placeholders);
+};
 
 var notFoundHandler = function(req, res){
-    req.viewName = '404';
+    req.viewName = 'pages/404-page';
     res.status(404);
     return staticPageHandler(req, res)
 };
 
 var errorHandler = function(req, res){
-    req.viewName = '404';
+    req.viewName = 'pages/404-page';
     res.status(404);
     return staticPageHandler(req, res)
 }
 
 
 router.get('/', staticPageHandler);
+router.get('/support', supportPageHandler);
 router.get('/login', function(req, res, next){
     res.send('Hello world');
-    //db.logregister.find(function(err, data){
-        //if(err){
-            //res.send(err);
-        //}4rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrre4r5                                          
-        //console.log(data);
-        //res.json(data);
-    //});
+
 });
 
 router.post('/register',function(req, res){
