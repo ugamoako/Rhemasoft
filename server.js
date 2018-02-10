@@ -68,6 +68,9 @@ app.use('/user', require('./controller/user.js'));
 /*particlesJS.load('particles-js', 'particles.json', function() {
   console.log('particles.js loaded - callback');
 });*/
+app.use(function(req, res, next){
+  require('.controller/site.js').notFoundHandler(req, res);
+})
 app.listen(config.http_port, function(){
     console.log('Server started on port'+ config.http_port);
 })

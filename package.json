@@ -33,6 +33,7 @@
     "mongoose": "*",
     "passport": "*",
     "passport-http": "*",
-    "passport-local": "*"
+    "passport-local": "*",
+    "underscore": "^1.8.3"
   }
 }
